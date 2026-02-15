@@ -1,6 +1,17 @@
 # Deploy ke GitHub Pages
 
-## Persiapan
+## ⚠️ Harus pakai "GitHub Actions" sebagai Source
+
+Jika Anda dapat error **GET .../src/main.tsx 404** saat membuka GitHub Page, artinya **Source** masih **"Deploy from a branch"**. Yang di-serve saat itu adalah kode sumber (termasuk `index.html` yang memuat `/src/main.tsx`), bukan hasil build Vite.
+
+**Perbaikan:**
+
+1. Buka repo di GitHub → **Settings** → **Pages**
+2. Di **Build and deployment** → **Source** pilih **"GitHub Actions"** (bukan "Deploy from a branch")
+3. Simpan. Jalankan ulang workflow **Deploy to GitHub Pages** di tab **Actions** (Run workflow) atau push commit baru
+4. Tunggu deploy selesai, lalu buka lagi URL GitHub Pages Anda
+
+## Persiapan (pertama kali)
 
 1. **Buat repo GitHub** (jika belum) dan push project ini.
 2. **Aktifkan GitHub Pages dari GitHub Actions**

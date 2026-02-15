@@ -1,3 +1,6 @@
+# Deploy Vite build ke GitHub Pages.
+# PENTING: Di repo Settings → Pages → Build and deployment → Source pilih "GitHub Actions".
+# Jika Source = "Deploy from a branch", yang di-serve adalah kode sumber (bukan hasil build) dan akan error 404 untuk /src/main.tsx.
 name: Deploy to GitHub Pages
 
 on:
@@ -30,11 +33,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set base path for GitHub Pages
+        id: base
+        run: |
+          if [ "${{ github.event.repository.name }}" = "${{ github.event.repository.owner }}.github.io" ]; then
+            echo "path=/" >> $GITHUB_OUTPUT
+          else
+            echo "path=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build
         run: npm run build
         env:
-          # Base path = nama repo, agar URL jadi https://username.github.io/nama-repo/
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_BASE_PATH: ${{ steps.base.outputs.path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
