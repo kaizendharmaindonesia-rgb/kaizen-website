@@ -1,20 +1,20 @@
 /**
- * Salin isi dist/ ke docs/ setelah build.
- * Berguna untuk GitHub Pages yang deploy dari branch dengan folder /docs.
+ * Salin isi dist/ ke project root (satu level di atas proyek Vite).
+ * Dari .../kaizen/kaizen/dist → .../kaizen/
  */
 import { cpSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const root = join(__dirname, '..')
-const dist = join(root, 'dist')
-const docs = join(root, 'docs')
+const projectRoot = join(__dirname, '..')   // .../kaizen/kaizen
+const repoRoot = join(projectRoot, '..')    // .../kaizen
+const dist = join(projectRoot, 'dist')
 
 if (!existsSync(dist)) {
   console.warn('dist/ not found. Run npm run build first.')
   process.exit(1)
 }
 
-cpSync(dist, docs, { recursive: true })
-console.log('Copied dist/ → docs/')
+cpSync(dist, repoRoot, { recursive: true })
+console.log('Copied', dist, '→', repoRoot)
