@@ -24,10 +24,14 @@ console.log('Copied', dist, '→', repoRoot)
 function fixFile(full) {
   let s = readFileSync(full, 'utf8')
   const before = s
+  // Path dalam string: "/assets/ atau '/assets/ atau `/assets/
   s = s.replace(/(["'`])\/assets\//g, '$1./assets/')
   s = s.replace(/(["'`])\/favicon\./g, '$1./favicon.')
+  // CSS url()
   s = s.replace(/url\(\/assets\//g, 'url(./assets/')
   s = s.replace(/url\(["']\/assets\//g, (m) => m.replace('/assets/', './assets/'))
+  // Semua /assets/ yang belum relatif (minified JS bisa tanpa quote di depan)
+  s = s.replace(/(?<!\.)\/assets\//g, './assets/')
   if (s !== before) {
     writeFileSync(full, s)
     console.log('Fixed paths in', full.replace(repoRoot, ''))
