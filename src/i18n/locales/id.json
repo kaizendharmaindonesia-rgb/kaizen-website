@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "PT Kaizen Dharma Indonesia - Company Profile"
+  },
+  "nav": {
+    "about": "Tentang Kami",
+    "visionMission": "Visi & Misi",
+    "values": "Nilai Kami",
+    "services": "Layanan",
+    "gallery": "Galeri",
+    "contact": "Kontak"
+  },
+  "gallery": {
+    "title": "Galeri"
+  },
+  "theme": {
+    "switchToLight": "Mode terang",
+    "switchToDark": "Mode gelap"
+  },
+  "hero": {
+    "tagline": "Jalan Anda Bekerja ke Jepang",
+    "subtitle": "Kami menyediakan solusi end-to-end: dari seleksi, pelatihan intensif bahasa & budaya Jepang, pengurusan dokumen (COE & Visa), hingga mobilisasi keberangkatan ke Jepang.",
+    "cta": "Hubungi Kami"
+  },
+  "about": {
+    "title": "Tentang PT Kaizen Dharma Indonesia",
+    "businessField": "Jasa Pelatihan Kerja dan Penempatan Tenaga Kerja ke Jepang",
+    "paragraph1": "PT Kaizen Dharma Indonesia bergerak di bidang jasa pelatihan kerja dan penempatan tenaga kerja ke Jepang. Kami menyediakan solusi end-to-end bagi calon tenaga kerja.",
+    "paragraph2": "Layanan kami meliputi seleksi, pelatihan intensif bahasa dan budaya Jepang, pengurusan dokumen legalitas (COE & Visa), hingga mobilisasi keberangkatan ke Jepang—semua dalam satu layanan."
+  },
+  "visionMission": {
+    "title": "Visi dan Misi",
+    "vision": "Visi",
+    "visionText": "Membangun sumberdaya manusia yang berkualitas serta mampu berkontribusi untuk menciptakan masyarakat yang adil, makmur, sejahtera dan bermartabat. Menjadikan LPK Kaizen Dharma Indonesia sebagai lembaga yang profesional dan berkualitas yang dapat menghasilkan sumberdaya manusia yang mampu berkompetisi di era Global dan memaknai tantangan sebagai peluang sesuai dengan perkembangan ilmu pengetahuan dan teknologi untuk memenuhi kebutuhan masyarakat melalui pengembangan pembelajaran Bahasa Asing.",
+    "mission": "Misi",
+    "mission1": "Menyelenggarakan program pendidikan dan pelatihan Bahasa Jepang secara profesional.",
+    "mission2": "Mengadakan kegiatan pengabdian kepada masyarakat secara edukatif, konsisten dan terprogram dengan mengacu pada pengembangan Bahasa Asing.",
+    "mission3": "Ikut memberikan kontribusi kepada masyarakat dengan membuka peluang bekerja ke Luar Negeri sehingga membantu Pemerintah dalam mendorong menciptakan dan menyediakan peluang kerja.",
+    "mission4": "Memberi kesempatan kepada masyarakat yang kurang mampu untuk menjadi lebih baik dan berwawasan.",
+    "mission5": "Mengoptimalkan potensi masyarakat yang belum tergali sehingga mampu bersaing dalam bursa tenaga kerja."
+  },
+  "values": {
+    "title": "Nilai-Nilai Kami",
+    "integrity": {
+      "title": "Integritas",
+      "desc": "Kami bertindak dengan kejujuran dan transparansi dalam setiap kemitraan dan proses penempatan."
+    },
+    "excellence": {
+      "title": "Keunggulan",
+      "desc": "Kami berusaha mencapai standar tertinggi dalam kualitas pelatihan dan kesiapan kandidat."
+    },
+    "innovation": {
+      "title": "Perbaikan Berkelanjutan",
+      "desc": "Kami mengedepankan semangat Kaizen—perbaikan berkelanjutan dalam program dan layanan kami."
+    },
+    "partnership": {
+      "title": "Kemitraan",
+      "desc": "Kami membangun hubungan yang langgeng dengan kandidat, pemberi kerja, dan mitra berdasarkan kepercayaan dan rasa hormat."
+    }
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "item1": {
+      "title": "Seleksi",
+      "desc": "Proses seleksi yang ketat untuk mencocokkan kandidat terbaik dengan peluang kerja di Jepang."
+    },
+    "item2": {
+      "title": "Pelatihan Bahasa & Budaya",
+      "desc": "Pelatihan intensif bahasa dan budaya Jepang untuk mempersiapkan kandidat bekerja dan hidup di Jepang."
+    },
+    "item3": {
+      "title": "Pengurusan Dokumen (COE & Visa)",
+      "desc": "Pengurusan dokumen legalitas termasuk Certificate of Eligibility (COE) dan proses Visa."
+    },
+    "item4": {
+      "title": "Mobilisasi & Keberangkatan",
+      "desc": "Pendampingan mobilisasi dan keberangkatan ke Jepang agar setiap kandidat berangkat dengan lancar."
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami siap mendengar dari Anda.",
+    "email": "Email",
+    "address": "Alamat",
+    "phone": "Telepon"
+  },
+  "footer": {
+    "companyName": "PT Kaizen Dharma Indonesia",
+    "rights": "Hak cipta dilindungi."
+  }
+}

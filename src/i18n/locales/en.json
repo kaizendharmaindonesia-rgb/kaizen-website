@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "PT Kaizen Dharma Indonesia - Company Profile"
+  },
+  "nav": {
+    "about": "About Us",
+    "visionMission": "Vision & Mission",
+    "values": "Our Values",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "hero": {
+    "tagline": "Your Pathway to Work in Japan",
+    "subtitle": "We provide end-to-end solutions: from selection and intensive Japanese language & culture training to document processing (COE & Visa) and mobilization to Japan.",
+    "cta": "Get in Touch"
+  },
+  "about": {
+    "title": "About PT Kaizen Dharma Indonesia",
+    "businessField": "Job Training Services and Placement of Workers to Japan",
+    "paragraph1": "PT Kaizen Dharma Indonesia is engaged in job training services and placement of workers to Japan. We support prospective workers with comprehensive solutions from start to finish.",
+    "paragraph2": "Our services include selection, intensive Japanese language and culture training, processing of legal documents (COE & Visa), and mobilization for departure to Japan—all under one roof."
+  },
+  "visionMission": {
+    "title": "Vision & Mission",
+    "vision": "Vision",
+    "visionText": "To build qualified human resources capable of contributing to creating a just, prosperous, peaceful, and dignified society. To make LPK Kaizen Dharma Indonesia a professional and quality institution that produces human resources capable of competing in the global era, interpreting challenges as opportunities in line with the development of science and technology, and meeting community needs through the development of foreign language learning.",
+    "mission": "Mission",
+    "mission1": "To organize professional Japanese language education and training programs.",
+    "mission2": "To conduct educational, consistent, and structured community service activities with reference to foreign language development.",
+    "mission3": "To contribute to the community by opening overseas employment opportunities, thereby assisting the Government in promoting and providing job opportunities.",
+    "mission4": "To provide opportunities for less fortunate communities to become better and more knowledgeable.",
+    "mission5": "To optimize the untapped potential of the community so they can compete in the job market."
+  },
+  "values": {
+    "title": "Our Values",
+    "integrity": {
+      "title": "Integrity",
+      "desc": "We act with honesty and transparency in every partnership and placement process."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "desc": "We strive for the highest standards in training quality and candidate readiness."
+    },
+    "innovation": {
+      "title": "Continuous Improvement",
+      "desc": "We embrace the spirit of Kaizen—continuous improvement in our programs and services."
+    },
+    "partnership": {
+      "title": "Partnership",
+      "desc": "We build lasting relationships with candidates, employers, and partners based on trust and respect."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "item1": {
+      "title": "Selection",
+      "desc": "Rigorous selection process to match the right candidates with opportunities in Japan."
+    },
+    "item2": {
+      "title": "Language & Culture Training",
+      "desc": "Intensive Japanese language and culture training to prepare candidates for work and life in Japan."
+    },
+    "item3": {
+      "title": "Document Processing (COE & Visa)",
+      "desc": "Handling of legality documents including Certificate of Eligibility (COE) and Visa processing."
+    },
+    "item4": {
+      "title": "Mobilization & Departure",
+      "desc": "Support for mobilization and departure to Japan, ensuring a smooth transition for every candidate."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you.",
+    "email": "Email",
+    "address": "Address",
+    "phone": "Phone"
+  },
+  "footer": {
+    "companyName": "PT Kaizen Dharma Indonesia",
+    "rights": "All rights reserved."
+  }
+}
