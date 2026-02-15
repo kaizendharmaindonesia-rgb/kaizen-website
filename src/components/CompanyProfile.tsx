@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
@@ -9,14 +10,15 @@ import {
 } from '@/components/ui/card'
 import Logo from '@/components/Logo'
 
-import gallery0 from '@/assets/images/gallery-0.jpeg'
-import gallery1 from '@/assets/images/gallery-1.jpeg'
-import gallery2 from '@/assets/images/gallery-2.jpeg'
-import gallery3 from '@/assets/images/gallery-3.jpeg'
-import gallery4 from '@/assets/images/gallery-4.jpeg'
-import gallery5 from '@/assets/images/gallery-5.jpeg'
-import gallery6 from '@/assets/images/gallery-6.jpeg'
-import gallery7 from '@/assets/images/gallery-7.jpeg'
+import heroBackground from '@/assets/images/modern-tokyo-street-background.webp'
+import gallery0 from '@/assets/images/gallery-0.webp'
+import gallery1 from '@/assets/images/gallery-1.webp'
+import gallery2 from '@/assets/images/gallery-2.webp'
+import gallery3 from '@/assets/images/gallery-3.webp'
+import gallery4 from '@/assets/images/gallery-4.webp'
+import gallery5 from '@/assets/images/gallery-5.webp'
+import gallery6 from '@/assets/images/gallery-6.webp'
+import gallery7 from '@/assets/images/gallery-7.webp'
 
 const galleryImages = [gallery0, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7]
 
@@ -41,6 +43,11 @@ type Props = {
 
 export default function CompanyProfile({ currentLang, onLanguageChange, theme, onThemeChange }: Props) {
   const { t } = useTranslation()
+  const [loadedGalleryImages, setLoadedGalleryImages] = useState<Set<number>>(new Set())
+
+  const handleGalleryImageLoad = (index: number) => {
+    setLoadedGalleryImages((prev) => new Set(prev).add(index))
+  }
 
   return (
     <div className={`min-h-screen flex flex-col ${theme === 'dark' ? 'dark' : ''}`}>
@@ -119,13 +126,19 @@ export default function CompanyProfile({ currentLang, onLanguageChange, theme, o
       <main>
         <section
           id="hero"
-          className="flex min-h-screen items-center justify-center px-4 pt-16 pb-24"
+          className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-16 pb-24"
         >
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-background/80 dark:bg-background/85" aria-hidden />
+          <div className="relative z-10 mx-auto max-w-2xl text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground drop-shadow-sm sm:text-4xl md:text-5xl">
               {t('hero.tagline')}
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-lg text-foreground/90 leading-relaxed drop-shadow-sm">
               {t('hero.subtitle')}
             </p>
             <Button asChild size="lg" className="mt-8">
@@ -309,12 +322,23 @@ export default function CompanyProfile({ currentLang, onLanguageChange, theme, o
               {galleryImages.map((src, i) => (
                 <div
                   key={i}
-                  className="overflow-hidden rounded-lg border border-border bg-card shadow-sm"
+                  className="relative overflow-hidden rounded-lg border border-border bg-card shadow-sm"
                 >
+                  {!loadedGalleryImages.has(i) && (
+                    <div
+                      className="absolute inset-0 flex items-center justify-center bg-muted"
+                      aria-hidden
+                    >
+                      <div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+                    </div>
+                  )}
                   <img
                     src={src}
                     alt=""
-                    className="aspect-[4/3] w-full object-cover transition-transform hover:scale-105"
+                    className={`aspect-[4/3] w-full object-cover transition-all duration-300 hover:scale-105 ${
+                      loadedGalleryImages.has(i) ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    onLoad={() => handleGalleryImageLoad(i)}
                   />
                 </div>
               ))}
@@ -375,9 +399,22 @@ export default function CompanyProfile({ currentLang, onLanguageChange, theme, o
       <footer className="border-t py-8">
         <div className="container max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 sm:px-6">
           <Logo height={28} className="max-h-7 w-auto" />
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} {t('footer.companyName')}. {t('footer.rights')}
-          </p>
+          <div className="flex flex-col items-end gap-1 text-right">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} {t('footer.companyName')}. {t('footer.rights')}
+            </p>
+            <p className="text-xs text-muted-foreground/80">
+              Hero image:{' '}
+              <a
+                href="https://www.freepik.com/free-photo/modern-tokyo-street-background_25969142.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                Designed by Freepik
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
